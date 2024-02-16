@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  /*background-color: blueviolet;*/
+  text-align: center;
+  font-size: 45px;
+  border-bottom: 1px solid gray;
+  margin: 0px;
+  padding: 20px;
+}
+
+ol {
+  border-right: 1px solid gray;
+  width: 100px;
+  margin: 0;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active {
+  color: red;
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: hotpink;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/*
+.ck {
+font-weight: 600;
+font-size: 1.5rem;
+color: gray;
+}
+
+//.ck2 {
+color: royalblue
+}
+*/
+
+#grid {
+  display: grid;
+  grid-template-columns: 150px 3fr;
+  border-bottom: 1px solid gray;
+}
+
+#article {
+  padding-left: 20px;
+}
+
+/*위치 중요*/
+@media (max-width: 800px) {
+  h1 {
+    border-bottom: none;
+  }
+
+  #grid {
+    display: block;
+  }
+
+  #grid ol {
+    border-right: none;
+  }
+}
