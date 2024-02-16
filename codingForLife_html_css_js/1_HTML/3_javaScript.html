@@ -5,19 +5,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript page</title>
+  <link rel="stylesheet" href="./style.css">
+  <script>
+    let day = function () {
+      document.querySelector('body').style.backgroundColor = 'black'
+      document.querySelector('body').style.color = 'white'
+      document.querySelector('h1').style.
+        return;
+    }
+    let night = function () {
+      document.querySelector('body').style.backgroundColor = 'white'
+      document.querySelector('body').style.color = 'black'
+      document.querySelector('h1').style.
+        return;
+    }
+  </script>
 </head>
 
 <body>
+  <input type="button" value="day" onclick="day()">
+  <input type="button" value="night" onclick="night()">
+  <!-- <input type="button" value="hi" onclick="alert('hi')">
+  <input type="text" id="t" value="text를 입력하세요" onchange="alert('changed')"> -->
   <h1><a href="./index.html">WEB</a></h1>
 
-  <ol>
-    <li><a href="./1_html.html">HTML</a></li>
-    <li><a href="./2_css.html">CSS</a></li>
-    <li><a href="./3_javaScript.html" active>JavaScript</a></li>
-  </ol>
-  <hr>
-  <h2>JavaScript 페이지로 전환되었습니다</h2>
-  <hr>
+  <div id="grid">
+    <ol>
+      <li><a href="./1_html.html">HTML</a></li>
+      <li><a href="./2_css.html">CSS</a></li>
+      <li><a href="./3_javaScript.html" active>JavaScript</a></li>
+    </ol>
+    <div id="article">
+      <h2>JavaScript 페이지로 전환되었습니다</h2>
+      <script>document.write("1 + 1 = ", 1 + 1)</script>
+    </div>
+  </div>
+
+
 
 </body>
 
