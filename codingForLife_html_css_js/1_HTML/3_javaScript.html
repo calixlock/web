@@ -7,24 +7,41 @@
   <title>JavaScript page</title>
   <link rel="stylesheet" href="./style.css">
   <script>
-    let day = function () {
-      document.querySelector('body').style.backgroundColor = 'black'
-      document.querySelector('body').style.color = 'white'
-      document.querySelector('h1').style.
-        return;
-    }
-    let night = function () {
-      document.querySelector('body').style.backgroundColor = 'white'
-      document.querySelector('body').style.color = 'black'
-      document.querySelector('h1').style.
-        return;
+
+    let dayNight = function () {
+      let btns = document.querySelectorAll('.day_night');
+      btns.forEach(function (btn) {
+        if (btn.value === 'day') {
+          document.querySelector('body').style.backgroundColor = 'black'
+          document.querySelector('body').style.color = 'white'
+          btn.value = 'night'
+          document.querySelector('h1>a').style.color = 'royalblue'
+          let aList = document.querySelectorAll('a');
+          let i = 0;
+          while (i < aList.length) {
+            aList[i].style.color = 'powderblue';
+            i++;
+          }
+
+        } else {
+          document.querySelector('body').style.backgroundColor = 'white'
+          document.querySelector('body').style.color = 'black'
+          btn.value = 'day'
+          document.querySelector('h1>a').style.color = 'black'
+          let items = document.querySelectorAll('#grid>ol>li>a');
+          items.forEach(function (item) {
+            item.style.color = 'royalblue';
+          });
+
+        }
+      });
+      return;
     }
   </script>
 </head>
 
 <body>
-  <input type="button" value="day" onclick="day()">
-  <input type="button" value="night" onclick="night()">
+  <input class="day_night" type="button" value="day" onclick="dayNight()">
   <!-- <input type="button" value="hi" onclick="alert('hi')">
   <input type="text" id="t" value="text를 입력하세요" onchange="alert('changed')"> -->
   <h1><a href="./index.html">WEB</a></h1>
@@ -39,6 +56,7 @@
       <h2>JavaScript 페이지로 전환되었습니다</h2>
       <script>document.write("1 + 1 = ", 1 + 1)</script>
     </div>
+    <input class="day_night" type="button" value="day" onclick="dayNight()">
   </div>
 
 
